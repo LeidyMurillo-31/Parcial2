@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taquilla - CineDemo</title>
+    <!-- Ruta adaptada a la estructura de carpetas de tu VS Code -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- Librería Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Panel Login -->
+    <div id="panelLogin" class="contenedor">
+        <h2>Acceso al Sistema</h2>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="clave" placeholder="Contraseña">
+        <button onclick="iniciarSesion()">Ingresar</button>
+    </div>
+
+    <!-- Panel Taquilla -->
+    <div id="panelTaquilla" class="contenedor oculto">
+        <h2>Control de Taquilla</h2>
+        <input type="text" id="pelicula" placeholder="Nombre de la película">
+        <input type="text" id="sala" placeholder="Sala (Ej. 01)">
+        <input type="number" id="boletas" placeholder="Cantidad de boletas">
+        
+        <div class="opciones-recargo">
+            <label><input type="checkbox" id="cambioAsiento"> Cambio de asiento</label>
+            <input type="time" id="horaCambio">
+        </div>
+        
+        <button onclick="procesarVenta()">Calcular Recaudación</button>
+        <p id="resultado">Recaudación: $0</p>
+        
+        <div class="multimedia">
+            <canvas id="graficaVentas"></canvas>
+            <video id="camara" autoplay playsinline></video>
+        </div>
+    </div>
+
+    <!-- Ruta adaptada a la estructura de carpetas de tu VS Code -->
+    <script src="../JS/Codigo.js"></script>
+</body>
+</html>
